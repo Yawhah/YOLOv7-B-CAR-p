@@ -12,6 +12,7 @@ from torchvision.ops import DeformConv2d
 from PIL import Image
 from torch.cuda import amp
 
+from models.biformer import BiLevelRoutingAttention,Attention,AttentionLePE
 from utils.datasets import letterbox
 from utils.general import non_max_suppression, make_divisible, scale_coords, increment_path, xyxy2xywh
 from utils.plots import color_list, plot_one_box
@@ -272,6 +273,7 @@ class SPPCSPC(nn.Module):
         self.cv5 = Conv(4 * c_, c_, 1, 1)
         self.cv6 = Conv(c_, c_, 3, 1)
         self.cv7 = Conv(2 * c_, c2, 1, 1)
+        self.att = BiLevelRoutingAttention(c2)
 
     def forward(self, x):
         x1 = self.cv4(self.cv3(self.cv1(x)))
