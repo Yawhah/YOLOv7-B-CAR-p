@@ -2048,7 +2048,7 @@ class PConv(nn.Module):
         x = torch.cat((x1, x2), 1)
         x = self.conv(x)
         return x
-        
+
 class CARAFE(nn.Module):
     def __init__(self, c, k_enc=3, k_up=5, c_mid=64, scale=2):
         """ The unofficial implementation of the CARAFE module.
