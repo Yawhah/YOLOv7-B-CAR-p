@@ -15,6 +15,8 @@ Implementation of paper - [YOLOv7: Trainable bag-of-freebies sets new state-of-t
 
 In response to the low accuracy and false detection issues of traditional convolutional networks in small object detection in drone images, this paper proposes an improved algorithm for small object detection in drone images to enhance aerial surveillance accuracy. The algorithm adopts YOLOv7 as the underlying framework and incorporates dynamic sparse attention into spatial pyramid pooling, forming the SPPCSPC-B module to enhance the detection capability for small objects. Additionally, the algorithm replaces part of the group convolution in the efficient aggregation network with local convolution, forming the ELAN-P module to improve the detection speed. Finally, lightweight upsampling operator CARAFE is used to reassemble the features, further enhancing the detection accuracy. Experimental results on the Aerial-airport dataset demonstrate that the proposed algorithm achieves a detection accuracy of 94.7% and a recall rate of 90.8%, outperforming the baseline algorithm by 3.9 percentage points while reducing parameters by 9% and shrinking the model size by 8%. Moreover, it effectively mitigates issues of false detection and missed detection of small objects.
 
+完整代码在明年毕业后更新
+
 
 ## Installation
 
